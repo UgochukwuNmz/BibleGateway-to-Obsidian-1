@@ -69,7 +69,7 @@ for book_index in "${!bookarray[@]}"; do
         echo -n " [[$filename|$chapter]]" >> "$index_file"
 
         # Write the YAML front matter to the temporary file first
-        echo -e "---\ntags:\n  - Bible\n---" > "$temp_file_path"
+        echo -e "---\ncssclass: \"bible\"\n---" > "$temp_file_path"
 
         # Initialize breadcrumb links with checks for first and last chapters
         if [ $chapter -eq 1 ]; then
